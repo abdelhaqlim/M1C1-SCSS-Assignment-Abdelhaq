@@ -1,0 +1,48 @@
+$textColorOne: green;
+$backgroundColorOne: #237c95;
+$backgroundImage: #{maserati};
+
+/* Task 1 */
+$textColorOne: red;
+.taskOne p {
+  color: $textColorOne;
+}
+/* Task 2 */
+@mixin textcolor {
+  color: $textColorOne;
+}
+
+.taskOne,
+.taskTwo {
+  @include textcolor;
+}
+
+/* Task 3 */
+
+.taskThree {
+  .nestedDiv {
+    color: red;
+  }
+}
+
+/* Task 4 */
+
+@mixin mixinTwo {
+  background-color: $backgroundColorOne;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+}
+
+.taskFour {
+  @include mixinTwo;
+}
+
+/* Task 5 */
+
+.taskFive {
+  background-image: url("https://s3.amazonaws.com/bottega-devcamp/scss/cars/#{$backgroundImage}.jpg");
+  width: 300px;
+  height: 300px;
+  object-fit: fill;
+}
